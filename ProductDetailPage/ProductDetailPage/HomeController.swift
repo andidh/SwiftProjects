@@ -12,6 +12,8 @@ final class HomeController: UITableViewController {
     
     fileprivate let cellId = "homeCellId"
     
+    fileprivate var model: Product = Product(name: "Macbook Pro 2016", productImage: "ig1", showcaseImages: ["ig1", "ig2", "ig3","ig1", "ig2", "ig3","ig1", "ig2", "ig3"])
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,8 +38,17 @@ extension HomeController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! HomeCell
         
-        cell.configure()
+        cell.configure(withProduct: model)
         
         return cell;
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProductViewController") as! ProductViewController
+        
+        controller.product = model
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
+

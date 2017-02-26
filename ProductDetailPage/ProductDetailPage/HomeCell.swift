@@ -19,9 +19,9 @@ final class HomeCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure() {
-        self.productImage.image = #imageLiteral(resourceName: "ig2")
-        self.productName.text = "Macbook Pro 2016"
+    func configure(withProduct product: Product) {
+        self.productImage.image = UIImage(named: product.productImage)
+        self.productName.text = product.name
     }
 
 
