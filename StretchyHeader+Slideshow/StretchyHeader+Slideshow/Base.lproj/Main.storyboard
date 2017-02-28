@@ -26,11 +26,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="GWT-Mc-qHx" customClass="StretchyHeaderView" customModule="StretchyHeader_Slideshow" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSk-g0-Waj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,8 +45,8 @@
                                     </connections>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="slideshowCellId" rowHeight="80" id="uPY-pz-jg6" customClass="SlideshowCell" customModule="StretchyHeader_Slideshow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="278" width="375" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="slideshowCellId" rowHeight="80" id="uPY-pz-jg6" customClass="SlideshowCell" customModule="StretchyHeader_Slideshow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="328" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uPY-pz-jg6" id="jnB-7e-XvV">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
@@ -63,13 +63,13 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCollectionCell" id="LKg-5S-dZm" customClass="FullImageCell" customModule="StretchyHeader_Slideshow" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                            <rect key="frame" x="0.0" y="-0.5" width="64" height="64"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOo-De-ona">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOo-De-ona">
                                                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -80,9 +80,39 @@
                                                                 <constraint firstAttribute="bottom" secondItem="bOo-De-ona" secondAttribute="bottom" id="s4f-lj-6J5"/>
                                                                 <constraint firstItem="bOo-De-ona" firstAttribute="leading" secondItem="LKg-5S-dZm" secondAttribute="leading" id="zMD-iX-MtE"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <integer key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                             <connections>
                                                                 <outlet property="picture" destination="bOo-De-ona" id="qcd-TV-tpc"/>
                                                             </connections>
+                                                        </collectionViewCell>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addItemCellId" id="5im-n1-UKh">
+                                                            <rect key="frame" x="76" y="-0.5" width="64" height="64"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKp-G7-BAQ">
+                                                                        <rect key="frame" x="8" y="8" width="46" height="48"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="50"/>
+                                                                        <state key="normal" title="+">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                    </button>
+                                                                </subviews>
+                                                            </view>
+                                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <integer key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -99,30 +129,30 @@
                                             <outlet property="collectionView" destination="kXi-vc-Ogc" id="goL-M4-h3U"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productDetailsCellId" rowHeight="238" id="kvn-zC-0qY" customClass="ProductDetailsCell" customModule="StretchyHeader_Slideshow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="358" width="375" height="238"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="productDetailsCellId" rowHeight="238" id="kvn-zC-0qY" customClass="ProductDetailsCell" customModule="StretchyHeader_Slideshow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="408" width="375" height="238"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kvn-zC-0qY" id="hY9-0K-HsE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyC-Ys-LKk">
-                                                    <rect key="frame" x="16" y="12" width="158.5" height="27"/>
+                                                    <rect key="frame" x="16" y="16" width="158.5" height="27"/>
                                                     <fontDescription key="fontDescription" name="GujaratiSangamMN-Bold" family="Gujarati Sangam MN" pointSize="19"/>
                                                     <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJa-Zt-dUF">
-                                                    <rect key="frame" x="16" y="45" width="343" height="185"/>
-                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="17"/>
+                                                    <rect key="frame" x="16" y="53" width="343" height="177"/>
+                                                    <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="15"/>
                                                     <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="oJa-Zt-dUF" secondAttribute="trailing" constant="16" id="BQF-fT-mH0"/>
-                                                <constraint firstItem="jyC-Ys-LKk" firstAttribute="top" secondItem="hY9-0K-HsE" secondAttribute="top" constant="12" id="F8R-pA-0qh"/>
-                                                <constraint firstItem="oJa-Zt-dUF" firstAttribute="top" secondItem="jyC-Ys-LKk" secondAttribute="bottom" constant="6" id="evn-8M-DF1"/>
+                                                <constraint firstItem="jyC-Ys-LKk" firstAttribute="top" secondItem="hY9-0K-HsE" secondAttribute="top" constant="16" id="F8R-pA-0qh"/>
+                                                <constraint firstItem="oJa-Zt-dUF" firstAttribute="top" secondItem="jyC-Ys-LKk" secondAttribute="bottom" constant="10" id="evn-8M-DF1"/>
                                                 <constraint firstAttribute="bottom" secondItem="oJa-Zt-dUF" secondAttribute="bottom" constant="8" id="fia-8r-cal"/>
                                                 <constraint firstItem="jyC-Ys-LKk" firstAttribute="leading" secondItem="hY9-0K-HsE" secondAttribute="leading" constant="16" id="oSC-DX-xQy"/>
                                                 <constraint firstItem="oJa-Zt-dUF" firstAttribute="leading" secondItem="hY9-0K-HsE" secondAttribute="leading" constant="16" id="sUD-dB-IbJ"/>

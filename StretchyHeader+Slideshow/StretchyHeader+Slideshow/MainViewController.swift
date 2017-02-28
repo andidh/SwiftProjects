@@ -10,16 +10,20 @@ import UIKit
 
 struct Product {
     let name: String
-    let images: [String]
+    var images: [String]
     let details: String
+    
+    mutating func add(image: String) {
+        images.append(image)
+    }
 }
 
 
 final class MainViewController: UIViewController {
     
-    fileprivate let product: Product = Product(name: "Macbook", images: ["ig1", "ig2", "ig3", "ig4", "ig5", "ig6"], details: "It’s faster and more powerful than before, yet remarkably thinner and lighter. It has the brightest, most colorful Mac notebook display ever. And it introduces the Touch Bar — a Multi-Touch enabled strip of glass built into the keyboard for instant access to the tools you want, right when you want them. The new MacBook Pro is built on groundbreaking ideas. And it’s ready for yours.It’s faster and more powerful than before, yet remarkably thinner and lighter. It has the brightest, most colorful Mac notebook display ever. And it introduces the Touch Bar — a Multi-Touch enabled strip of glass built into the keyboard for instant access to the tools you want, right when you want them. The new MacBook Pro is built on groundbreaking ideas. And it’s ready for yours." )
+    fileprivate var product: Product = Product(name: "Macbook", images: ["ig1", "ig2", "ig3", "ig4", "ig5", "ig6"], details: "It’s faster and more powerful than before, yet remarkably thinner and lighter. It has the brightest, most colorful Mac notebook display ever. And it introduces the Touch Bar — a Multi-Touch enabled strip of glass built into the keyboard for instant access to the tools you want, right when you want them. The new MacBook Pro is built on groundbreaking ideas. And it’s ready for yours.It’s faster and more powerful than before, yet remarkably thinner and lighter. It has the brightest, most colorful Mac notebook display ever. And it introduces the Touch Bar — a Multi-Touch enabled strip of glass built into the keyboard for instant access to the tools you want, right when you want them. The new MacBook Pro is built on groundbreaking ideas. And it’s ready for yours." )
 
-    fileprivate let headerHeight: CGFloat = 250.0
+    fileprivate let headerHeight: CGFloat = 300.0
     fileprivate var headerView: StretchyHeaderView!
     
     @IBOutlet weak var tableView: UITableView!
@@ -87,21 +91,31 @@ extension MainViewController : UITableViewDelegate, UITableViewDataSource {
 extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return product.images.count
+        return product.images.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCollectionCell", for: indexPath) as! FullImageCell
-        
-        let image = UIImage(named: product.images[indexPath.row])
-        cell.picture.image = image
-        
-        return cell
+        if (indexPath.item == 0) {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "addItemCellId", for: indexPath)
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCollectionCell", for: indexPath) as! FullImageCell
+            
+            let image = UIImage(named: product.images[indexPath.row - 1])
+            cell.picture.image = image
+            
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        headerView.picture.image = UIImage(named: product.images[indexPath.row])
+        if (indexPath.item == 0) {
+            
+        } else {
+            headerView.picture.image = UIImage(named: product.images[indexPath.row - 1])
+        }
     }
+    
+    
     
 }
 

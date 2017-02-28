@@ -30,24 +30,28 @@
                                 <rect key="frame" x="16" y="255" width="288" height="0.5"/>
                                 <color key="backgroundColor" red="1" green="0.93591099564880498" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="0.5" id="aQX-6J-J7T"/>
+                                    <constraint firstAttribute="height" constant="1" id="aQX-6J-J7T"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBX-5B-wfO">
-                                <rect key="frame" x="16" y="12" width="30" height="30"/>
+                                <rect key="frame" x="31" y="40" width="44" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.96743580060000001" blue="0.17032674950000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="WUh-hu-qBw"/>
-                                    <constraint firstAttribute="width" constant="30" id="seJ-zg-2fw"/>
+                                    <constraint firstAttribute="height" constant="44" id="WUh-hu-qBw"/>
+                                    <constraint firstAttribute="width" constant="44" id="seJ-zg-2fw"/>
                                 </constraints>
+                                <inset key="contentEdgeInsets" minX="13" minY="12" maxX="13" maxY="12"/>
                                 <state key="normal" image="menu">
                                     <color key="titleColor" red="1" green="0.93333333333333335" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="menuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ivd-xL-A6m"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,11 +59,11 @@
                             <constraint firstItem="4I0-1w-97j" firstAttribute="top" secondItem="F0g-ct-Vr4" secondAttribute="bottom" constant="16" id="3hH-bC-U5N"/>
                             <constraint firstAttribute="trailing" secondItem="F0g-ct-Vr4" secondAttribute="trailing" id="AoI-Ea-eu4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F0g-ct-Vr4" secondAttribute="bottom" multiplier="3:1.5" constant="1" id="GHf-Vc-RLQ"/>
-                            <constraint firstItem="uBX-5B-wfO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GLP-kv-QM6"/>
+                            <constraint firstItem="uBX-5B-wfO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="GLP-kv-QM6"/>
                             <constraint firstItem="F0g-ct-Vr4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QYe-Bm-SEg"/>
                             <constraint firstAttribute="trailing" secondItem="4I0-1w-97j" secondAttribute="trailing" constant="16" id="SmS-mc-UD6"/>
                             <constraint firstItem="4I0-1w-97j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="VKR-Z4-Fs1"/>
-                            <constraint firstItem="uBX-5B-wfO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="12" id="b7C-Q1-mwp"/>
+                            <constraint firstItem="uBX-5B-wfO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="40" id="b7C-Q1-mwp"/>
                             <constraint firstItem="F0g-ct-Vr4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lTS-6f-CM7"/>
                         </constraints>
                     </view>
