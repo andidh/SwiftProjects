@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircleTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="city" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-ct-Vr4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="239.5"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4I0-1w-97j">
+                                <rect key="frame" x="16" y="255" width="288" height="0.5"/>
+                                <color key="backgroundColor" red="1" green="0.93591099564880498" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="aQX-6J-J7T"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBX-5B-wfO">
+                                <rect key="frame" x="16" y="12" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.96743580060000001" blue="0.17032674950000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WUh-hu-qBw"/>
+                                    <constraint firstAttribute="width" constant="30" id="seJ-zg-2fw"/>
+                                </constraints>
+                                <state key="normal" image="menu">
+                                    <color key="titleColor" red="1" green="0.93333333333333335" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4I0-1w-97j" firstAttribute="top" secondItem="F0g-ct-Vr4" secondAttribute="bottom" constant="16" id="3hH-bC-U5N"/>
+                            <constraint firstAttribute="trailing" secondItem="F0g-ct-Vr4" secondAttribute="trailing" id="AoI-Ea-eu4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F0g-ct-Vr4" secondAttribute="bottom" multiplier="3:1.5" constant="1" id="GHf-Vc-RLQ"/>
+                            <constraint firstItem="uBX-5B-wfO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GLP-kv-QM6"/>
+                            <constraint firstItem="F0g-ct-Vr4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QYe-Bm-SEg"/>
+                            <constraint firstAttribute="trailing" secondItem="4I0-1w-97j" secondAttribute="trailing" constant="16" id="SmS-mc-UD6"/>
+                            <constraint firstItem="4I0-1w-97j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="VKR-Z4-Fs1"/>
+                            <constraint firstItem="uBX-5B-wfO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="12" id="b7C-Q1-mwp"/>
+                            <constraint firstItem="F0g-ct-Vr4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lTS-6f-CM7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="138.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="city" width="5760" height="3840"/>
+        <image name="menu" width="30" height="23"/>
+    </resources>
+</document>
