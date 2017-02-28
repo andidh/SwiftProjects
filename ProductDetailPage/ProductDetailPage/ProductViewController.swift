@@ -41,9 +41,9 @@ final class ProductViewController: UIViewController {
     
     fileprivate func makeTransparentNavbar() {
         let navbar = self.navigationController?.navigationBar
-        let transparentPixel = UIImage.image(withColor: .clear)
-        navbar?.setBackgroundImage(transparentPixel, for: .default)
-        navbar?.shadowImage = transparentPixel
+        //let transparentPixel = UIImage.image(withColor: .clear)
+        navbar?.setBackgroundImage(UIImage(), for: .default)
+        navbar?.shadowImage = UIImage()
         navbar?.isTranslucent = true
     }
 
