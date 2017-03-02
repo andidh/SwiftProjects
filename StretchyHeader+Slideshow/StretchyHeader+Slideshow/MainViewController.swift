@@ -21,6 +21,8 @@ struct Product {
 
 final class MainViewController: UIViewController {
     
+    fileprivate var currentSelectedCell: FullImageCell?
+    
     fileprivate var product: Product = Product(name: "Macbook", images: ["ig1", "ig2", "ig3", "ig4", "ig5", "ig6"], details: "It’s faster and more powerful than before, yet remarkably thinner and lighter. It has the brightest, most colorful Mac notebook display ever. And it introduces the Touch Bar — a Multi-Touch enabled strip of glass built into the keyboard for instant access to the tools you want, right when you want them. The new MacBook Pro is built on groundbreaking ideas. And it’s ready for yours.It’s faster and more powerful than before, yet remarkably thinner and lighter. It has the brightest, most colorful Mac notebook display ever. And it introduces the Touch Bar — a Multi-Touch enabled strip of glass built into the keyboard for instant access to the tools you want, right when you want them. The new MacBook Pro is built on groundbreaking ideas. And it’s ready for yours." )
 
     fileprivate let headerHeight: CGFloat = 300.0
@@ -111,6 +113,11 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
         if (indexPath.item == 0) {
             
         } else {
+            if let currentSelectedCell = currentSelectedCell {
+                currentSelectedCell.blurView.isHidden = true
+            }
+            currentSelectedCell = collectionView.cellForItem(at: indexPath) as? FullImageCell
+            currentSelectedCell?.blurView.isHidden = false
             headerView.picture.image = UIImage(named: product.images[indexPath.row - 1])
         }
     }

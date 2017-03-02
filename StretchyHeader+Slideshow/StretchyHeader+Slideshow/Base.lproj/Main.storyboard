@@ -63,7 +63,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCollectionCell" id="LKg-5S-dZm" customClass="FullImageCell" customModule="StretchyHeader_Slideshow" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="-0.5" width="64" height="64"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -72,12 +72,24 @@
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bOo-De-ona">
                                                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                                     </imageView>
+                                                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFC-nU-iRO">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gLW-DL-wvU">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        </view>
+                                                                        <blurEffect style="light"/>
+                                                                    </visualEffectView>
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="bOo-De-ona" secondAttribute="trailing" id="6WN-Fy-K6y"/>
                                                                 <constraint firstItem="bOo-De-ona" firstAttribute="top" secondItem="LKg-5S-dZm" secondAttribute="top" id="UeL-X7-PwL"/>
+                                                                <constraint firstItem="MFC-nU-iRO" firstAttribute="leading" secondItem="LKg-5S-dZm" secondAttribute="leading" id="Z8e-6V-S0s"/>
+                                                                <constraint firstItem="MFC-nU-iRO" firstAttribute="top" secondItem="LKg-5S-dZm" secondAttribute="top" id="dse-wr-Ial"/>
+                                                                <constraint firstAttribute="bottom" secondItem="MFC-nU-iRO" secondAttribute="bottom" id="kVE-KI-3Ai"/>
                                                                 <constraint firstAttribute="bottom" secondItem="bOo-De-ona" secondAttribute="bottom" id="s4f-lj-6J5"/>
+                                                                <constraint firstAttribute="trailing" secondItem="MFC-nU-iRO" secondAttribute="trailing" id="uaJ-Mq-vgC"/>
                                                                 <constraint firstItem="bOo-De-ona" firstAttribute="leading" secondItem="LKg-5S-dZm" secondAttribute="leading" id="zMD-iX-MtE"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
@@ -86,11 +98,12 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
+                                                                <outlet property="blurView" destination="MFC-nU-iRO" id="6aq-OC-Xld"/>
                                                                 <outlet property="picture" destination="bOo-De-ona" id="qcd-TV-tpc"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addItemCellId" id="5im-n1-UKh">
-                                                            <rect key="frame" x="76" y="-0.5" width="64" height="64"/>
+                                                            <rect key="frame" x="76" y="0.0" width="64" height="64"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>

@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var searchButton: UIButton!
+    
+    lazy var transitionObject = CircularTransition()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +28,26 @@ class ViewController: UIViewController {
         return .lightContent
     }
 
-    @IBAction func menuButtonTapped(_ sender: Any) {
-        
-        print("it works")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! SearchController
+        vc.transitioningDelegate = self
+        vc.modalPresentationStyle = .custom
     }
-
 }
 
+extension ViewController: UIViewControllerTransitioningDelegate {
+ 
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transitionObject.currentMode = .present
+        transitionObject.startingPoint = searchButton.center
+        transitionObject.circleColor = searchButton.backgroundColor
+        return transitionObject
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transitionObject.currentMode = .dismiss
+        transitionObject.startingPoint = searchButton.center
+        transitionObject.circleColor = searchButton.backgroundColor
+        return transitionObject
+    }
+}

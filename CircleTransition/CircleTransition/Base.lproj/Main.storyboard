@@ -40,8 +40,8 @@
                                     <constraint firstAttribute="height" constant="44" id="WUh-hu-qBw"/>
                                     <constraint firstAttribute="width" constant="44" id="seJ-zg-2fw"/>
                                 </constraints>
-                                <inset key="contentEdgeInsets" minX="13" minY="12" maxX="13" maxY="12"/>
-                                <state key="normal" image="menu">
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="search">
                                     <color key="titleColor" red="1" green="0.93333333333333335" blue="0.16078431372549021" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -50,7 +50,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="menuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ivd-xL-A6m"/>
+                                    <segue destination="RNH-Ze-cFy" kind="show" id="M57-Bx-inB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,14 +67,97 @@
                             <constraint firstItem="F0g-ct-Vr4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lTS-6f-CM7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchButton" destination="uBX-5B-wfO" id="oz9-Bo-xxW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135" y="138.75"/>
         </scene>
+        <!--Search Controller-->
+        <scene sceneID="7n2-k7-2eu">
+            <objects>
+                <viewController id="RNH-Ze-cFy" customClass="SearchController" customModule="CircleTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2b6-uD-BN7"/>
+                        <viewControllerLayoutGuide type="bottom" id="SOp-tR-Y8q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ogl-kf-aZW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoF-ff-SMc">
+                                <rect key="frame" x="31" y="40" width="44" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.96743580060000001" blue="0.17032674950000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Lu3-hX-tW9"/>
+                                    <constraint firstAttribute="height" constant="44" id="xbc-Cq-LUd"/>
+                                </constraints>
+                                <state key="normal" image="delete">
+                                    <color key="titleColor" red="1" green="0.93333333330000001" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelButton:" destination="RNH-Ze-cFy" eventType="touchUpInside" id="mMD-P5-Raf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB9-j0-cph">
+                                <rect key="frame" x="31" y="100" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="8a0-hA-2Jj"/>
+                                    <constraint firstAttribute="width" constant="25" id="umw-vK-zyL"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button" image="search"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8I2-cM-QX6">
+                                <rect key="frame" x="77" y="104" width="227" height="17"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tpm-oI-atd">
+                                <rect key="frame" x="77" y="121.5" width="227" height="1.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="0pE-EU-AIz"/>
+                                    <constraint firstAttribute="height" constant="1.5" id="hip-H8-AnH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8I2-cM-QX6" firstAttribute="trailing" secondItem="ogl-kf-aZW" secondAttribute="trailingMargin" id="2Sh-iE-Iog"/>
+                            <constraint firstItem="Tpm-oI-atd" firstAttribute="top" secondItem="8I2-cM-QX6" secondAttribute="bottom" constant="0.5" id="3ON-h6-ttz"/>
+                            <constraint firstItem="8I2-cM-QX6" firstAttribute="leading" secondItem="ZB9-j0-cph" secondAttribute="trailing" constant="21" id="5Z1-o4-qqV"/>
+                            <constraint firstItem="ZB9-j0-cph" firstAttribute="leading" secondItem="ogl-kf-aZW" secondAttribute="leadingMargin" constant="15" id="CLR-0v-npC"/>
+                            <constraint firstItem="Tpm-oI-atd" firstAttribute="trailing" secondItem="8I2-cM-QX6" secondAttribute="trailing" id="RYW-OL-alC"/>
+                            <constraint firstItem="ZB9-j0-cph" firstAttribute="top" secondItem="hoF-ff-SMc" secondAttribute="bottom" constant="16" id="S65-FD-ixJ"/>
+                            <constraint firstItem="hoF-ff-SMc" firstAttribute="top" secondItem="2b6-uD-BN7" secondAttribute="bottom" constant="20" id="TIN-QQ-R0n"/>
+                            <constraint firstItem="Tpm-oI-atd" firstAttribute="leading" secondItem="8I2-cM-QX6" secondAttribute="leading" id="UBn-FQ-EbO"/>
+                            <constraint firstItem="8I2-cM-QX6" firstAttribute="centerY" secondItem="ZB9-j0-cph" secondAttribute="centerY" id="ZJn-ef-zjG"/>
+                            <constraint firstItem="Tpm-oI-atd" firstAttribute="top" secondItem="8I2-cM-QX6" secondAttribute="bottom" constant="0.5" id="ekX-S7-JFd"/>
+                            <constraint firstItem="hoF-ff-SMc" firstAttribute="leading" secondItem="ogl-kf-aZW" secondAttribute="leadingMargin" constant="15" id="hhP-lD-aqb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="hoF-ff-SMc" id="94h-qn-qk3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZY-Ik-Cgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.625" y="135"/>
+        </scene>
     </scenes>
     <resources>
         <image name="city" width="5760" height="3840"/>
-        <image name="menu" width="30" height="23"/>
+        <image name="delete" width="25" height="25"/>
+        <image name="search" width="26" height="26"/>
     </resources>
 </document>

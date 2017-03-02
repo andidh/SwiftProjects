@@ -10,5 +10,9 @@ import UIKit
 
 class FullImageCell: UICollectionViewCell {
     
+    @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var picture: UIImageView!
+    
+    
+    
 }
