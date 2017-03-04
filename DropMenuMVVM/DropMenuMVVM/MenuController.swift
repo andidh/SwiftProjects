@@ -64,7 +64,7 @@ extension MenuController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let cellModel = viewModel.tableCells[indexPath.row]
+        var cellModel = viewModel.tableCells[indexPath.row]
         cellModel.cellSelected()
     }
     

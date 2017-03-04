@@ -8,6 +8,22 @@
 
 import UIKit
 
+/*
+    MENU STRUCTURE:
+    
+    Choose option:
+        - option 1
+        - option 2
+ 
+    Chose option:
+        - option 3
+        - option 4
+ 
+ 
+ 
+ */
+
+
 class MenuControllerModel {
     
     
@@ -18,10 +34,9 @@ class MenuControllerModel {
     var didUpdate: (() -> Void)?
     var didInsert: (([Int]) -> Void)?
     var didRemove: (([Int]) -> Void)?
-    var didSelectDropCell: ((Int) -> Void)?
     
     func initData() {
-        tableCells = [menuCellModel("Select an option", tag: 0)]
+        tableCells = [menuCellModel("Select an option", tag: 0), menuCellModel("Select last option", tag: 1)]
         didUpdate?()
     }
     
@@ -33,8 +48,14 @@ class MenuControllerModel {
     
     fileprivate func dropCellModel(_ title: String, tag: Int, switchOn: Bool) -> DropCellModel {
         var instance = DropCellModel(withTitle: title, tag: tag, switchOn: switchOn)
-        instance.didSelectCell = { self.didSelectDropCell?($0)}
+        instance.didSelectCell = { self.selectDropCell(withTag: $0)}
         return instance
+    }
+    
+    func selectDropCell(withTag tag: Int) {
+        guard isMenuExpanded else { return }
+        
+        print("Switch no. \(tag) has changed")
     }
     
     func selectMenuCell(withTag tag: Int) {
@@ -49,20 +70,31 @@ class MenuControllerModel {
     
     func insertOptions(forMenuAtIndex index: Int) {
         if (index == 0) {
-            tableCells.append( dropCellModel("First option", tag: 1, switchOn: false))
-            tableCells.append( dropCellModel("Second option", tag: 2, switchOn: true))
+            tableCells.insert(dropCellModel("First option", tag: 1, switchOn: false), at: 1)
+            tableCells.insert( dropCellModel("Second option", tag: 2, switchOn: true), at: 2)
+            
+            didInsert?([1,2])
+        } else if (index == 1) {
+            tableCells.append(dropCellModel("Third option", tag: 2, switchOn: false))
+            tableCells.append( dropCellModel("Fourth option", tag: 3, switchOn: true))
+            
+            didInsert?([2,3])
         }
         
-        didInsert?([1,2])
     }
     
     func removeOptions(forMenuAtIndex index: Int) {
         if (index == 0) {
             tableCells.remove(at: 2)
             tableCells.remove(at: 1)
+            
+            didRemove?([1,2])
+        } else if (index == 1) {
+            tableCells.remove(at: 3)
+            tableCells.remove(at: 2)
+            didRemove?([2,3])
         }
         
-        didRemove?([1,2])
     }
     
 }

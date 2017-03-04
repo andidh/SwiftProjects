@@ -17,4 +17,6 @@ class MenuCell: UITableViewCell {
     func configure(withModel model: MenuCellModel) {
         menuTitleLabel.text = model.displayTitle
     }
+    
+    
 }

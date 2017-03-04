@@ -13,7 +13,7 @@ struct DropCellModel {
     // MARK: - Properties
     let cellTag: Int
     let displayTitle: String
-    let isSwitchOn: Bool
+    var isSwitchOn: Bool
     
     init(withTitle title: String, tag: Int, switchOn: Bool) {
         displayTitle = title
@@ -39,7 +39,8 @@ extension DropCellModel : CellRepresentable {
         return cell
     }
     
-    func cellSelected() {
+    mutating func cellSelected() {
+        isSwitchOn = !isSwitchOn
         didSelectCell?(cellTag)
     }
     

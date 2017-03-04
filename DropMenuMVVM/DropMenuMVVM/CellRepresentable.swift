@@ -12,6 +12,6 @@ protocol CellRepresentable {
     
     static func registerCell(forTableView tv: UITableView)
     func cellInstance(forTableView tv: UITableView, indexPath: IndexPath) -> UITableViewCell
-    func cellSelected()
+    mutating func cellSelected()
     
 }
