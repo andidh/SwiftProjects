@@ -14,7 +14,10 @@ final class ViewController: UIViewController {
     
     fileprivate let days = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Firday", "Saturday"]
     fileprivate var options = [0,0,0,0,0,0,0]
-    fileprivate var isMenuShown = false
+    
+    fileprivate var firstMenuExpanded = false
+    fileprivate var secondMenuExpanded = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,12 +34,31 @@ final class ViewController: UIViewController {
         tableView.reloadData()
     }
 
-    fileprivate func showMenu() {
-        isMenuShown = !isMenuShown
+    fileprivate func showFirstMenu() {
+        firstMenuExpanded = !firstMenuExpanded
         
         tableView.beginUpdates()
         
-        var indexes = [IndexPath]()
+        let newIndex = IndexPath(row: 1, section: 0)
+        
+        tableView.insertRows(at: [newIndex], with: .fade)
+        
+        tableView.endUpdates()
+        
+    }
+    
+    fileprivate func hideFirstMenu() {
+        firstMenuExpanded = !firstMenuExpanded
+        
+        tableView.beginUpdates()
+        
+        let oldIndex = IndexPath(row: 1, section: 0)
+        
+        tableView.deleteRows(at: [oldIndex], with: .fade)
+        tableView.endUpdates()
+    }
+    
+    fileprivate func showSecondMenu() {
         
         for (index, _) in days.enumerated() {
             indexes.append(IndexPath(row: index + 1, section: 0))
@@ -44,21 +66,11 @@ final class ViewController: UIViewController {
         
         tableView.insertRows(at: indexes, with: .fade)
         tableView.endUpdates()
+
     }
     
-    fileprivate func hideMenu() {
-        isMenuShown = !isMenuShown
+    fileprivate func hideSecondMenu() {
         
-        tableView.beginUpdates()
-        
-        var indexes = [IndexPath]()
-        
-        for (index, _) in days.enumerated() {
-            indexes.append(IndexPath(row: index + 1, section: 0))
-        }
-        
-        tableView.deleteRows(at: indexes, with: .fade)
-        tableView.endUpdates()
     }
 
 }

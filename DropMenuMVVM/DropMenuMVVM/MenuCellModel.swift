@@ -10,7 +10,7 @@ import UIKit
 
 struct MenuCellModel {
     
-    let displayTitle: String
+    let displayTitle: eString
     let cellTag: Int
     
     init(withTitle title: String, tag: Int) {
