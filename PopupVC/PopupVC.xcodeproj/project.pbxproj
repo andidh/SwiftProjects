@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9927EEC51E6DD6DA00053A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9927EEC41E6DD6DA00053A92 /* AppDelegate.swift */; };
+		9927EEC71E6DD6DA00053A92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9927EEC61E6DD6DA00053A92 /* ViewController.swift */; };
+		9927EECA1E6DD6DA00053A92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9927EEC81E6DD6DA00053A92 /* Main.storyboard */; };
+		9927EECC1E6DD6DA00053A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9927EECB1E6DD6DA00053A92 /* Assets.xcassets */; };
+		9927EECF1E6DD6DA00053A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9927EECD1E6DD6DA00053A92 /* LaunchScreen.storyboard */; };
+		9927EEDA1E6DD71100053A92 /* PopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9927EED81E6DD71100053A92 /* PopupController.swift */; };
+		9927EEDB1E6DD71100053A92 /* PopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9927EED91E6DD71100053A92 /* PopupController.xib */; };
+		9927EEDD1E6DD8D200053A92 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9927EEDC1E6DD8D200053A92 /* DimmingPresentationController.swift */; };
+		9927EEDF1E6DDA0900053A92 /* PopupAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9927EEDE1E6DDA0900053A92 /* PopupAnimation.swift */; };
+		9927EEE11E6DDD3800053A92 /* FadeOutAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9927EEE01E6DDD3800053A92 /* FadeOutAnimation.swift */; };
+		9927EEE61E6DE21E00053A92 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9927EEE41E6DE21E00053A92 /* SecondViewController.swift */; };
+		9927EEE71E6DE21E00053A92 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9927EEE51E6DE21E00053A92 /* SecondViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9927EEC11E6DD6DA00053A92 /* PopupVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopupVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9927EEC41E6DD6DA00053A92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9927EEC61E6DD6DA00053A92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9927EEC91E6DD6DA00053A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9927EECB1E6DD6DA00053A92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9927EECE1E6DD6DA00053A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9927EED01E6DD6DA00053A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9927EED81E6DD71100053A92 /* PopupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupController.swift; sourceTree = "<group>"; };
+		9927EED91E6DD71100053A92 /* PopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupController.xib; sourceTree = "<group>"; };
+		9927EEDC1E6DD8D200053A92 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
+		9927EEDE1E6DDA0900053A92 /* PopupAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupAnimation.swift; sourceTree = "<group>"; };
+		9927EEE01E6DDD3800053A92 /* FadeOutAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeOutAnimation.swift; sourceTree = "<group>"; };
+		9927EEE41E6DE21E00053A92 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9927EEE51E6DE21E00053A92 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9927EEBE1E6DD6D900053A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9927EEB81E6DD6D900053A92 = {
+			isa = PBXGroup;
+			children = (
+				9927EEC31E6DD6DA00053A92 /* PopupVC */,
+				9927EEC21E6DD6DA00053A92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9927EEC21E6DD6DA00053A92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9927EEC11E6DD6DA00053A92 /* PopupVC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9927EEC31E6DD6DA00053A92 /* PopupVC */ = {
+			isa = PBXGroup;
+			children = (
+				9927EED61E6DD6E500053A92 /* Controllers */,
+				9927EEC81E6DD6DA00053A92 /* Main.storyboard */,
+				9927EECB1E6DD6DA00053A92 /* Assets.xcassets */,
+				9927EEC41E6DD6DA00053A92 /* AppDelegate.swift */,
+				9927EECD1E6DD6DA00053A92 /* LaunchScreen.storyboard */,
+				9927EED01E6DD6DA00053A92 /* Info.plist */,
+			);
+			path = PopupVC;
+			sourceTree = "<group>";
+		};
+		9927EED61E6DD6E500053A92 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9927EEE21E6DE20800053A92 /* SecondController */,
+				9927EEDC1E6DD8D200053A92 /* DimmingPresentationController.swift */,
+				9927EED71E6DD6F700053A92 /* PopupController */,
+				9927EEC61E6DD6DA00053A92 /* ViewController.swift */,
+				9927EEDE1E6DDA0900053A92 /* PopupAnimation.swift */,
+				9927EEE01E6DDD3800053A92 /* FadeOutAnimation.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9927EED71E6DD6F700053A92 /* PopupController */ = {
+			isa = PBXGroup;
+			children = (
+				9927EED81E6DD71100053A92 /* PopupController.swift */,
+				9927EED91E6DD71100053A92 /* PopupController.xib */,
+			);
+			name = PopupController;
+			sourceTree = "<group>";
+		};
+		9927EEE21E6DE20800053A92 /* SecondController */ = {
+			isa = PBXGroup;
+			children = (
+				9927EEE41E6DE21E00053A92 /* SecondViewController.swift */,
+				9927EEE51E6DE21E00053A92 /* SecondViewController.xib */,
+			);
+			name = SecondController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9927EEC01E6DD6D900053A92 /* PopupVC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9927EED31E6DD6DA00053A92 /* Build configuration list for PBXNativeTarget "PopupVC" */;
+			buildPhases = (
+				9927EEBD1E6DD6D900053A92 /* Sources */,
+				9927EEBE1E6DD6D900053A92 /* Frameworks */,
+				9927EEBF1E6DD6D900053A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopupVC;
+			productName = PopupVC;
+			productReference = 9927EEC11E6DD6DA00053A92 /* PopupVC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9927EEB91E6DD6D900053A92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Dehelean Andrei";
+				TargetAttributes = {
+					9927EEC01E6DD6D900053A92 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9927EEBC1E6DD6D900053A92 /* Build configuration list for PBXProject "PopupVC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9927EEB81E6DD6D900053A92;
+			productRefGroup = 9927EEC21E6DD6DA00053A92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9927EEC01E6DD6D900053A92 /* PopupVC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9927EEBF1E6DD6D900053A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9927EEDB1E6DD71100053A92 /* PopupController.xib in Resources */,
+				9927EECF1E6DD6DA00053A92 /* LaunchScreen.storyboard in Resources */,
+				9927EECC1E6DD6DA00053A92 /* Assets.xcassets in Resources */,
+				9927EECA1E6DD6DA00053A92 /* Main.storyboard in Resources */,
+				9927EEE71E6DE21E00053A92 /* SecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9927EEBD1E6DD6D900053A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9927EEDF1E6DDA0900053A92 /* PopupAnimation.swift in Sources */,
+				9927EEE11E6DDD3800053A92 /* FadeOutAnimation.swift in Sources */,
+				9927EEC71E6DD6DA00053A92 /* ViewController.swift in Sources */,
+				9927EEDA1E6DD71100053A92 /* PopupController.swift in Sources */,
+				9927EEE61E6DE21E00053A92 /* SecondViewController.swift in Sources */,
+				9927EEC51E6DD6DA00053A92 /* AppDelegate.swift in Sources */,
+				9927EEDD1E6DD8D200053A92 /* DimmingPresentationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9927EEC81E6DD6DA00053A92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9927EEC91E6DD6DA00053A92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9927EECD1E6DD6DA00053A92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9927EECE1E6DD6DA00053A92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9927EED11E6DD6DA00053A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9927EED21E6DD6DA00053A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9927EED41E6DD6DA00053A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PopupVC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andid.PopupVC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9927EED51E6DD6DA00053A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PopupVC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = andid.PopupVC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9927EEBC1E6DD6D900053A92 /* Build configuration list for PBXProject "PopupVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9927EED11E6DD6DA00053A92 /* Debug */,
+				9927EED21E6DD6DA00053A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9927EED31E6DD6DA00053A92 /* Build configuration list for PBXNativeTarget "PopupVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9927EED41E6DD6DA00053A92 /* Debug */,
+				9927EED51E6DD6DA00053A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9927EEB91E6DD6D900053A92 /* Project object */;
+}
