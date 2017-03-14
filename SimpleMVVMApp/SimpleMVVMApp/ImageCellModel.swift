@@ -17,7 +17,6 @@ struct ImageCellModel {
     }
     
     var didSelectCell: ((String) -> Void)?
-    
 }
 
 

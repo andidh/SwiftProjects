@@ -15,7 +15,7 @@ struct TextCellModel {
     let displayValue: String
     
     // MARK: - Events
-    var didSelectCell: ((Int) -> Void)?
+    var didSelectCell: ((String) -> Void)?
     
     init(withText text: String, id: Int) {
         rawText = text
@@ -38,6 +38,6 @@ extension TextCellModel : CellType {
     }
     
     func cellSelected() {
-        didSelectCell?(itemId)
+        didSelectCell?(rawText)
     }
 }

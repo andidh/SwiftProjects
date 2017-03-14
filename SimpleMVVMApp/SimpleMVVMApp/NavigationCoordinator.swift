@@ -24,6 +24,7 @@ struct NavigationCoordinator {
     fileprivate func showHome() {
         var viewModel = HomeViewModel()
         viewModel.didSelectImageCell = showImageController
+        viewModel.didSelectTextCell = showTextController
         let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeController") as! HomeController
         homeVC.viewModel = viewModel
         navigationController.pushViewController(homeVC, animated: true)
@@ -36,7 +37,10 @@ struct NavigationCoordinator {
         self.navigationController.pushViewController(imageVC, animated: true)
     }
     
-    fileprivate func showTextController() {
-        
+    fileprivate func showTextController(_ value: String) {
+        let textVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TextController") as! TextController
+        let viewModel = TextControllerModel(articleText: value)
+        textVC.model = viewModel
+        self.navigationController.pushViewController(textVC, animated: true)
     }
 }

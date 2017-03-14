@@ -12,9 +12,13 @@ class TextController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     
+    var model: TextControllerModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Text Controller"
+        self.textLabel.text = model?.articleText
     }
 
 }

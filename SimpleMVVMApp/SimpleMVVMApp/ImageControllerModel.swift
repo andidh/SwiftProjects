@@ -6,7 +6,7 @@
 //  Copyright © 2017 Dehelean Andrei. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct ImageControllerModel {
     

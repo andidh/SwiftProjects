@@ -12,11 +12,6 @@ class TextCell: UITableViewCell {
 
     @IBOutlet weak var titleText: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     func configure(withModel model: TextCellModel) {
         self.titleText.text = model.displayValue
     }

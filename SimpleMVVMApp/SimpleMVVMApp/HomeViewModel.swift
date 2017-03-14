@@ -19,7 +19,7 @@ struct HomeViewModel {
     
     // MARK :- Events
     var didUpdate: (() -> Void)?
-    var didSelectTextCell: ((Int) -> Void)?
+    var didSelectTextCell: ((String) -> Void)?
     var didSelectImageCell: ((String) -> Void)?
     
     mutating func refreshData() {
